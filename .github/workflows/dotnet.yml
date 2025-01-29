@@ -22,7 +22,9 @@ jobs:
 
     - name: Display solution path
       run: echo "Solution Path" ${{ env.SOLUTION_PATH }}
-  
+
+    - name: List projects in solution
+      run: dotnet sln ${{ env.SOLUTION_PATH }} list
 
     - name: Restore dependencies
       run: dotnet restore ${{ env.SOLUTION_PATH }}
