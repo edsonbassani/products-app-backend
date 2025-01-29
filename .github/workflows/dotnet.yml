@@ -8,6 +8,7 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -16,12 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Find solution file
-      id: find_sln
-      run: echo "SOLUTION_PATH=$(find . -name '*.sln' | head -n 1)" >> $GITHUB_ENV
-
-    - name: Display solution path
-      run: echo "Solution Path" ${{ env.SOLUTION_PATH }}
-
-    - name: Restore
-    - run: dotnet restore ./DeveloperEvaluation.sln
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
