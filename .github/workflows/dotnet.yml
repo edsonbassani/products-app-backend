@@ -11,35 +11,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    
+    - name: Checkout full repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-        
-    # Set the correct path based on repository structure
-    - name: Set Solution Path
-      run: echo "ROOT_PATH=$(pwd)" >> $GITHUB_ENV
-    
-    - name: Find solution file
-      id: find_sln
-      run: echo "SOLUTION_PATH=${GITHUB_WORKSPACE}/DeveloperEvaluation.sln" >> $GITHUB_ENV
 
-    - name: Display Paths
-      run: echo "Root Path: ${{ env.ROOT_PATH }} - Solution Path: ${{ env.SOLUTION_PATH }}"
+    - name: Debug File Structure
+      run: ls -R
+
+    - name: Check DeveloperEvaluation.sln
+      run: test -f DeveloperEvaluation.sln && echo "Solution file exists" || echo "Solution file NOT FOUND!"
+
+    - name: Find solution file
+      run: echo "SOLUTION_PATH=$(find $GITHUB_WORKSPACE -name 'DeveloperEvaluation.sln')" >> $GITHUB_ENV
+
+    - name: Display Solution Path
+      run: echo "Solution Path: ${{ env.SOLUTION_PATH }}"
 
     - name: Restore dependencies
-      run: dotnet restore ${{ env.SOLUTION_PATH }}
+      run: |
+        echo "Restoring solution from: ${{ env.SOLUTION_PATH }}"
+        dotnet restore "${{ env.SOLUTION_PATH }}"
 
     - name: Build
-      run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore
+      run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
 
     - name: Test
-      run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --verbosity normal
+      run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
 
     - name: Publish
-      run: dotnet publish ${{ env.ROOT_PATH }}/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
+      run: dotnet publish src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
 
     - name: Create ZIP file
       run: zip -r ./output.zip ./publish
