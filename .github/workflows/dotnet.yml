@@ -1,4 +1,4 @@
-name: .NET CI
+name: .NET Build & Test
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout full repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Ensures all files are downloaded
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -24,34 +24,34 @@ jobs:
       - name: Debug: Show Current Directory
         run: pwd
 
-      - name: Debug: Show File Structure
-        run: ls -R
+      - name: Debug: List All Files
+        run: ls -R ${{ github.workspace }}
 
-      - name: Debug: Check for .csproj files
+      - name: Debug: Check for .csproj Files
         run: find ${{ github.workspace }}/src -name "*.csproj"
 
       - name: Set Solution Path
-        run: echo 'SOLUTION_PATH=${{ github.workspace }}/DeveloperEvaluation.sln' >> $GITHUB_ENV
+        run: echo "SOLUTION_PATH=${{ github.workspace }}/DeveloperEvaluation.sln" >> $GITHUB_ENV
 
       - name: Display Solution Path
-        run: echo "Solution Path: ${{ env.SOLUTION_PATH }}"
+        run: cat $GITHUB_ENV
 
-      - name: Restore dependencies
+      - name: Restore Dependencies
         run: dotnet restore "${{ env.SOLUTION_PATH }}"
 
-      - name: Build
+      - name: Build Solution
         run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
 
-      - name: Test
+      - name: Run Tests
         run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
 
-      - name: Publish
-        run: dotnet publish "${{ env.SOLUTION_PATH }}" -c Release -o ./publish
+      - name: Publish Web API
+        run: dotnet publish src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
 
-      - name: Create ZIP file
+      - name: Package Build Artifacts
         run: zip -r ./output.zip ./publish
 
-      - name: Upload artifact
+      - name: Upload Build Artifact
         uses: actions/upload-artifact@v3
         with:
           name: build-output
