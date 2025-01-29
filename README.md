@@ -8,7 +8,6 @@ It provides endpoints for authentication and product CRUD operations, with pagin
 
 ## 🔹 Security & Code Analysis
 ![CodeQL](https://github.com/edsonbassani/products-app-backend/actions/workflows/dotnet.yml/badge.svg?label=CodeQL)
-
 ![OWASP Dependency Check](https://github.com/edsonbassani/products-app-backend/actions/workflows/dotnet.yml/badge.svg?label=OWASP%20Dependency%20Check)
 
 ## Tech Stack 
