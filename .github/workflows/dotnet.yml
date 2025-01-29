@@ -1,4 +1,4 @@
-name: .NET Build & Test
+name: .NET
 
 on:
   push:
@@ -11,48 +11,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout full repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Ensures all files are downloaded
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Find solution file
+      id: find_sln
+      run: echo "SOLUTION_PATH=$(find . -name '*.sln' | head -n 1)" >> $GITHUB_ENV
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
+    - name: Display solution path
+      run: echo "Solution Path" ${{ env.SOLUTION_PATH }}
+  
 
-      - name: Debug: Show Current Directory
-        run: pwd
+    - name: Restore dependencies
+      run: dotnet restore ${{ env.SOLUTION_PATH }}
 
-      - name: Debug: List All Files
-        run: ls -R ${{ github.workspace }}
+    - name: Build
+      run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore
 
-      - name: Debug: Check for .csproj Files
-        run: find ${{ github.workspace }}/src -name "*.csproj"
+    - name: Test
+      run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --verbosity normal
 
-      - name: Set Solution Path
-        run: echo "SOLUTION_PATH=${{ github.workspace }}/DeveloperEvaluation.sln" >> $GITHUB_ENV
+    - name: Publish
+      run: dotnet publish Ambev.DeveloperEvaluation.WebApi/Ambev.DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
 
-      - name: Display Solution Path
-        run: cat $GITHUB_ENV
+    - name: Create ZIP file
+      run: zip -r ./output.zip ./publish
 
-      - name: Restore Dependencies
-        run: dotnet restore "${{ env.SOLUTION_PATH }}"
-
-      - name: Build Solution
-        run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
-
-      - name: Run Tests
-        run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
-
-      - name: Publish Web API
-        run: dotnet publish src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
-
-      - name: Package Build Artifacts
-        run: zip -r ./output.zip ./publish
-
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-output
-          path: ./output.zip
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-output
+        path: ./output.zip
