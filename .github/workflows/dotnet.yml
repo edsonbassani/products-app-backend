@@ -30,8 +30,8 @@ jobs:
       uses: dependency-check/Dependency-Check_Action@main
       with:
         project: "DeveloperEvaluation"
-        path: "${{ github.workspace }}/src"
-        format: "HTML"  # Generates an HTML report
+        path: "src"
+        format: "HTML"
         out: "dependency-check-report"
 
     - name: Run .NET Code Analysis
