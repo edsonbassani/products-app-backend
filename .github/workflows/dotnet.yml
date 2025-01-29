@@ -1,42 +1,38 @@
-name: .NET
-
-on:
-  push:
-    branches: [ "dev" ]
-  pull_request:
-    branches: [ "dev" ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout full repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Debug File Structure
+      run: ls -R src/
+
+    - name: Check DeveloperEvaluation.Domain.csproj
+      run: test -f src/DeveloperEvaluation.Domain/DeveloperEvaluation.Domain.csproj && echo "File Exists" || echo "File Not Found"
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Find solution file
-      id: find_sln
-      run: echo "SOLUTION_PATH=$(find . -name '*.sln' | head -n 1)" >> $GITHUB_ENV
-
-    - name: Display solution path
-      run: echo "Solution Path" ${{ env.SOLUTION_PATH }}
-
-    - name: List projects in solution
-      run: dotnet sln ${{ env.SOLUTION_PATH }} list
 
     - name: Restore dependencies
-      run: dotnet restore ${{ env.SOLUTION_PATH }}
+      run: dotnet restore
 
-    - name: Build
-      run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore
+    - name: Build Solution
+      run: dotnet build --no-restore
+
+    - name: Build DeveloperEvaluation.Domain separately (if needed)
+      run: dotnet build src/DeveloperEvaluation.Domain/DeveloperEvaluation.Domain.csproj --no-restore
 
     - name: Test
-      run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal
 
-    - name: Publish
-      run: dotnet publish /home/runner/work/products-app-backend/products-app-backend/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
+    - name: Publish Web API
+      run: dotnet publish src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
 
     - name: Create ZIP file
       run: zip -r ./output.zip ./publish
