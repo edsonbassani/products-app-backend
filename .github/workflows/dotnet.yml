@@ -22,3 +22,6 @@ jobs:
 
     - name: Display solution path
       run: echo "Solution Path" ${{ env.SOLUTION_PATH }}
+
+    - name: Restore
+    - run: dotnet restore ./DeveloperEvaluation.sln
