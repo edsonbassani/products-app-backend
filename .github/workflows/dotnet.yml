@@ -21,20 +21,27 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Show Current Directory
+      - name: Debug: Show Current Directory
         run: pwd
 
-      - name: Show File Structure
+      - name: Debug: Show File Structure
         run: ls -R
+
+      - name: Debug: Check for .csproj files
+        run: find ${{ github.workspace }}/src -name "*.csproj"
 
       - name: Set Solution Path
         run: echo 'SOLUTION_PATH=${{ github.workspace }}/DeveloperEvaluation.sln' >> $GITHUB_ENV
 
       - name: Display Solution Path
-        run: echo ${{ env.SOLUTION_PATH }}
+        run: echo "Solution Path: ${{ env.SOLUTION_PATH }}"
 
-      - name: Restore dependencies
-        run: dotnet restore "${{ env.SOLUTION_PATH }}"
+      - name: Restore dependencies (each project)
+        run: |
+          dotnet restore src/DeveloperEvaluation.Domain/DeveloperEvaluation.Domain.csproj
+          dotnet restore src/DeveloperEvaluation.Application/DeveloperEvaluation.Application.csproj
+          dotnet restore src/DeveloperEvaluation.ORM/DeveloperEvaluation.ORM.csproj
+          dotnet restore src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj
 
       - name: Build
         run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
