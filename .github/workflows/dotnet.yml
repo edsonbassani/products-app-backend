@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout full repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
@@ -44,11 +47,14 @@ jobs:
       run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
 
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
+      uses: github/codeql-action/init@v3
       with:
         languages: "csharp"
 
-    - name: Perform CodeQL Analysis
+    - name: Build Code for CodeQL
+      run: dotnet build "${{ env.SOLUTION_PATH }}" --configuration Release
+
+    - name: Perform CodeQL Analysis (v3)
       uses: github/codeql-action/analyze@v3
 
     - name: Publish
