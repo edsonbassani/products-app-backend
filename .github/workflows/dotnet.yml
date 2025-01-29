@@ -1,4 +1,4 @@
-name: .NET
+name: .NET CI
 
 on:
   push:
@@ -36,12 +36,8 @@ jobs:
       - name: Display Solution Path
         run: echo "Solution Path: ${{ env.SOLUTION_PATH }}"
 
-      - name: Restore dependencies (each project)
-        run: |
-          dotnet restore src/DeveloperEvaluation.Domain/DeveloperEvaluation.Domain.csproj
-          dotnet restore src/DeveloperEvaluation.Application/DeveloperEvaluation.Application.csproj
-          dotnet restore src/DeveloperEvaluation.ORM/DeveloperEvaluation.ORM.csproj
-          dotnet restore src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj
+      - name: Restore dependencies
+        run: dotnet restore "${{ env.SOLUTION_PATH }}"
 
       - name: Build
         run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
@@ -50,7 +46,7 @@ jobs:
         run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
 
       - name: Publish
-        run: dotnet publish src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
+        run: dotnet publish "${{ env.SOLUTION_PATH }}" -c Release -o ./publish
 
       - name: Create ZIP file
         run: zip -r ./output.zip ./publish
