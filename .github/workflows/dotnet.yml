@@ -22,7 +22,7 @@ jobs:
     
     - name: Find solution file
       id: find_sln
-      run: echo "SOLUTION_PATH=${ROOT_PATH}/products-app-backend.sln" >> $GITHUB_ENV
+      run: echo "SOLUTION_PATH=${ROOT_PATH}/DeveloperEvaluation.sln" >> $GITHUB_ENV
 
     - name: Display Paths
       run: echo "Root Path" ${{ env.SOLUTION_PATH }} - "Solution Path" ${{ env.SOLUTION_PATH }}
