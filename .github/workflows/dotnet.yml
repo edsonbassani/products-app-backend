@@ -49,7 +49,7 @@ jobs:
         languages: "csharp"
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+      uses: github/codeql-action/analyze@v3
 
     - name: Publish
       run: dotnet publish "${{ github.workspace }}/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj" -c Release -o ./publish
