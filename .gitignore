@@ -34,3 +34,4 @@ artifacts/
 # OS generated files
 .DS_Store
 Thumbs.db
+/.github/workflows/old/dotnet.yml
