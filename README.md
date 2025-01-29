@@ -3,11 +3,13 @@
 This project is the backend of the **Products App**, developed using **.NET 8** with a **Clean Architecture** and **CQRS** approach. 
 It provides endpoints for authentication and product CRUD operations, with pagination, sorting, and filtering support.
 
-[![Code Analysis](https://github.com/edsonbassani/products-app-backend/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/edsonbassani/products-app-backend/actions/workflows/code-analysis.yml)
+## 🔹 CI/CD Status
+![Build Status](https://github.com/edsonbassani/products-app-backend/actions/workflows/dotnet.yml/badge.svg?label=Build%20Status)
 
-[![CodeQL](https://github.com/edsonbassani/products-app-backend/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/edsonbassani/products-app-backend/actions/workflows/codeql-analysis.yml)
+## 🔹 Security & Code Analysis
+![CodeQL](https://github.com/edsonbassani/products-app-backend/actions/workflows/dotnet.yml/badge.svg?label=CodeQL)
 
-[![OWASP Dependency Check](https://github.com/edsonbassani/products-app-backend/actions/workflows/owasp-dependency-check.yml/badge.svg)](https://github.com/edsonbassani/products-app-backend/actions/workflows/owasp-dependency-check.yml)
+![OWASP Dependency Check](https://github.com/edsonbassani/products-app-backend/actions/workflows/dotnet.yml/badge.svg?label=OWASP%20Dependency%20Check)
 
 ## Tech Stack 
 - **.NET 8**
