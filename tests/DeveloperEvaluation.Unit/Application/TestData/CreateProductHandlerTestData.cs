@@ -1,8 +1,8 @@
-using Developerevaluation.Application.Products.CreateProduct;
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Application.Products.CreateProduct;
+using DeveloperEvaluation.Domain.Enums;
 using Bogus;
 
-namespace Developerevaluation.Unit.Domain;
+namespace DeveloperEvaluation.Unit.Domain;
 
 /// <summary>
 /// Provides methods for generating test data using the Bogus library.

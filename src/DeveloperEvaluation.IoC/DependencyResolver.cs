@@ -1,7 +1,7 @@
-﻿using Developerevaluation.IoC.ModuleInitializers;
+﻿using DeveloperEvaluation.IoC.ModuleInitializers;
 using Microsoft.AspNetCore.Builder;
 
-namespace Developerevaluation.IoC;
+namespace DeveloperEvaluation.IoC;
 
 public static class DependencyResolver
 {

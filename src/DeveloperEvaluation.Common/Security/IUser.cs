@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.Common.Security
+﻿namespace DeveloperEvaluation.Common.Security
 {
     /// <summary>
     /// Define o contrato para representação de um usuário no sistema.

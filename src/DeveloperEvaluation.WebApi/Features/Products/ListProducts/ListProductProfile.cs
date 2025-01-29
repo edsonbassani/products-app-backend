@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace Developerevaluation.WebApi.Features.Products.ListProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.ListProduct;
 
 /// <summary>
 /// Profile for mapping ListProduct feature requests to commands

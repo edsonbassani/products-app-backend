@@ -1,12 +1,12 @@
-﻿using Developerevaluation.Domain.Repositories;
-using Developerevaluation.ORM;
-using Developerevaluation.ORM.Repositories;
+﻿using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.ORM;
+using DeveloperEvaluation.ORM.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Developerevaluation.IoC.ModuleInitializers;
+namespace DeveloperEvaluation.IoC.ModuleInitializers;
 
 public class InfrastructureModuleInitializer : IModuleInitializer
 {

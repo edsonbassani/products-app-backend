@@ -1,10 +1,10 @@
-﻿using Developerevaluation.Domain.Entities;
+﻿using DeveloperEvaluation.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
 
-namespace Developerevaluation.ORM;
+namespace DeveloperEvaluation.ORM;
 
 public class DefaultContext : DbContext
 {
@@ -37,7 +37,7 @@ public class YourDbContextFactory : IDesignTimeDbContextFactory<DefaultContext>
 
         builder.UseNpgsql(
                connectionString,
-               b => b.MigrationsAssembly("Developerevaluation.WebApi")
+               b => b.MigrationsAssembly("DeveloperEvaluation.WebApi")
         );
 
         return new DefaultContext(builder.Options);

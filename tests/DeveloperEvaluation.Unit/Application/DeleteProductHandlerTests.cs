@@ -1,11 +1,11 @@
-﻿using Developerevaluation.Application.Products.CreateProduct;
-using Developerevaluation.Application.Products.DeleteProduct;
-using Developerevaluation.Application.Users.DeleteUser;
-using Developerevaluation.Common.Security;
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Repositories;
-using Developerevaluation.ORM.Repositories;
-using Developerevaluation.Unit.Domain;
+﻿using DeveloperEvaluation.Application.Products.CreateProduct;
+using DeveloperEvaluation.Application.Products.DeleteProduct;
+using DeveloperEvaluation.Application.Users.DeleteUser;
+using DeveloperEvaluation.Common.Security;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.ORM.Repositories;
+using DeveloperEvaluation.Unit.Domain;
 using AutoMapper;
 using Castle.Core.Logging;
 using FluentAssertions;
@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 using NSubstitute;
 using Xunit;
 
-namespace Developerevaluation.Unit.Application;
+namespace DeveloperEvaluation.Unit.Application;
 
 /// <summary>
 /// Contains unit tests for the <see cref="CreateProductHandler"/> class.

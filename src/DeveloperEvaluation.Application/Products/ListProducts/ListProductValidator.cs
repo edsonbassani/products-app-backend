@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.Application.Products.ListProduct;
+namespace DeveloperEvaluation.Application.Products.ListProduct;
 
 /// <summary>
 /// Validator for ListProductCommand

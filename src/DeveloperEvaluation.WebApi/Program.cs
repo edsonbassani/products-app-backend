@@ -1,13 +1,13 @@
-using Developerevaluation.Application;
-using Developerevaluation.Application.Auth.AuthenticateUser;
-using Developerevaluation.Common.HealthChecks;
-using Developerevaluation.Common.Logging;
-using Developerevaluation.Common.Security;
-using Developerevaluation.Common.Validation;
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.IoC;
-using Developerevaluation.ORM;
-using Developerevaluation.WebApi.Middleware;
+using DeveloperEvaluation.Application;
+using DeveloperEvaluation.Application.Auth.AuthenticateUser;
+using DeveloperEvaluation.Common.HealthChecks;
+using DeveloperEvaluation.Common.Logging;
+using DeveloperEvaluation.Common.Security;
+using DeveloperEvaluation.Common.Validation;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.IoC;
+using DeveloperEvaluation.ORM;
+using DeveloperEvaluation.WebApi.Middleware;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Diagnostics;
@@ -17,7 +17,7 @@ using Rebus.Routing.TypeBased;
 using Rebus.Transport.InMem;
 using Serilog;
 
-namespace Developerevaluation.WebApi;
+namespace DeveloperEvaluation.WebApi;
 
 public class Program
 {
@@ -39,7 +39,7 @@ public class Program
             builder.Services.AddDbContext<DefaultContext>(options =>
                 options.UseNpgsql(
                     builder.Configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly("Developerevaluation.ORM")
+                    b => b.MigrationsAssembly("DeveloperEvaluation.ORM")
                 )
             );
 

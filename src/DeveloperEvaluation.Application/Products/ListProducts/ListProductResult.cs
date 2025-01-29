@@ -1,7 +1,7 @@
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.Application.Products.ListProduct;
+namespace DeveloperEvaluation.Application.Products.ListProduct;
 
 /// <summary>
 /// Response model for GetProduct operation

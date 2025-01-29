@@ -23,9 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Developerevaluation.Domain\Developerevaluation.Domain.csproj" />
-    <ProjectReference Include="..\..\src\Developerevaluation.Application\Developerevaluation.Application.csproj" />
-    <ProjectReference Include="..\..\src\Developerevaluation.ORM\Developerevaluation.ORM.csproj" />
+    <ProjectReference Include="..\..\src\DeveloperEvaluation.Domain\DeveloperEvaluation.Domain.csproj" />
+    <ProjectReference Include="..\..\src\DeveloperEvaluation.Application\DeveloperEvaluation.Application.csproj" />
+    <ProjectReference Include="..\..\src\DeveloperEvaluation.ORM\DeveloperEvaluation.ORM.csproj" />
   </ItemGroup>
 
 </Project>

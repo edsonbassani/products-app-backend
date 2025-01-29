@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Validation;
+﻿using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
-namespace Developerevaluation.Application.Users.CreateUser;
+namespace DeveloperEvaluation.Application.Users.CreateUser;
 
 /// <summary>
 /// Validator for CreateUserCommand that defines validation rules for user creation command.

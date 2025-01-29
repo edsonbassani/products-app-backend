@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Domain.Events
+namespace DeveloperEvaluation.Domain.Events
 {
     public class UserRegisteredEvent
     {

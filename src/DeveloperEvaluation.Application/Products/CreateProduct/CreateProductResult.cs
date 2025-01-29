@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.Application.Products.CreateProduct;
+﻿namespace DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// Represents the response returned after successfully creating a new product.

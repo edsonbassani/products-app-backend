@@ -9,22 +9,22 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/Developerevaluation.WebApi/Developerevaluation.WebApi.csproj", "src/Developerevaluation.WebApi/"]
-COPY ["src/Developerevaluation.IoC/Developerevaluation.IoC.csproj", "src/Developerevaluation.IoC/"]
-COPY ["src/Developerevaluation.Domain/Developerevaluation.Domain.csproj", "src/Developerevaluation.Domain/"]
-COPY ["src/Developerevaluation.Common/Developerevaluation.Common.csproj", "src/Developerevaluation.Common/"]
-COPY ["src/Developerevaluation.Application/Developerevaluation.Application.csproj", "src/Developerevaluation.Application/"]
-COPY ["src/Developerevaluation.ORM/Developerevaluation.ORM.csproj", "src/Developerevaluation.ORM/"]
-RUN dotnet restore "./src/Developerevaluation.WebApi/Developerevaluation.WebApi.csproj"
+COPY ["src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj", "src/DeveloperEvaluation.WebApi/"]
+COPY ["src/DeveloperEvaluation.IoC/DeveloperEvaluation.IoC.csproj", "src/DeveloperEvaluation.IoC/"]
+COPY ["src/DeveloperEvaluation.Domain/DeveloperEvaluation.Domain.csproj", "src/DeveloperEvaluation.Domain/"]
+COPY ["src/DeveloperEvaluation.Common/DeveloperEvaluation.Common.csproj", "src/DeveloperEvaluation.Common/"]
+COPY ["src/DeveloperEvaluation.Application/DeveloperEvaluation.Application.csproj", "src/DeveloperEvaluation.Application/"]
+COPY ["src/DeveloperEvaluation.ORM/DeveloperEvaluation.ORM.csproj", "src/DeveloperEvaluation.ORM/"]
+RUN dotnet restore "./src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj"
 COPY . .
-WORKDIR "/src/src/Developerevaluation.WebApi"
-RUN dotnet build "./Developerevaluation.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/src/DeveloperEvaluation.WebApi"
+RUN dotnet build "./DeveloperEvaluation.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Developerevaluation.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./DeveloperEvaluation.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Developerevaluation.WebApi.dll"]
+ENTRYPOINT ["dotnet", "DeveloperEvaluation.WebApi.dll"]

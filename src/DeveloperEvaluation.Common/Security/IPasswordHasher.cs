@@ -1,6 +1,6 @@
 using System;
 
-namespace Developerevaluation.Common.Security;
+namespace DeveloperEvaluation.Common.Security;
 
 /// <summary>
 /// Provides functionality for hashing and verifying passwords.

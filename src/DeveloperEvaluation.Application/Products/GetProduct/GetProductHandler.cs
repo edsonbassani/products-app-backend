@@ -1,9 +1,9 @@
 using AutoMapper;
 using MediatR;
 using FluentValidation;
-using Developerevaluation.Domain.Repositories;
+using DeveloperEvaluation.Domain.Repositories;
 
-namespace Developerevaluation.Application.Products.GetProduct;
+namespace DeveloperEvaluation.Application.Products.GetProduct;
 
 /// <summary>
 /// Handler for processing GetProductCommand requests

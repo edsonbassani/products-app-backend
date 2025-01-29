@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace Developerevaluation.Common.Validation;
+namespace DeveloperEvaluation.Common.Validation;
 
 public class ValidationResultDetail
 {

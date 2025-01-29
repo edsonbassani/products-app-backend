@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.Application.Users.DeleteUser;
+namespace DeveloperEvaluation.Application.Users.DeleteUser;
 
 /// <summary>
 /// Validator for DeleteUserCommand

@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Developerevaluation.IoC\Developerevaluation.IoC.csproj" />
+    <ProjectReference Include="..\DeveloperEvaluation.IoC\DeveloperEvaluation.IoC.csproj" />
   </ItemGroup>
 
   <ItemGroup>

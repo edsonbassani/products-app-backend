@@ -1,11 +1,11 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Developerevaluation.WebApi.Common;
-using Developerevaluation.WebApi.Features.Auth.AuthenticateUserFeature;
-using Developerevaluation.Application.Auth.AuthenticateUser;
+using DeveloperEvaluation.WebApi.Common;
+using DeveloperEvaluation.WebApi.Features.Auth.AuthenticateUserFeature;
+using DeveloperEvaluation.Application.Auth.AuthenticateUser;
 
-namespace Developerevaluation.WebApi.Features.Auth;
+namespace DeveloperEvaluation.WebApi.Features.Auth;
 
 /// <summary>
 /// Controller for authentication operations

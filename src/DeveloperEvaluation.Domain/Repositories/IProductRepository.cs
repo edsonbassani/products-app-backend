@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Domain.Repositories;
+namespace DeveloperEvaluation.Domain.Repositories;
 
 /// <summary>
 /// Repository interface for Product entity operations

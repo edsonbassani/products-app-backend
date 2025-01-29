@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Products.ListProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.ListProduct;
 
 /// <summary>
 /// Validator for ListProductRequest

@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.Application.Auth.AuthenticateUser
+namespace DeveloperEvaluation.Application.Auth.AuthenticateUser
 {
     public class AuthenticateUserValidator : AbstractValidator<AuthenticateUserCommand>
     {

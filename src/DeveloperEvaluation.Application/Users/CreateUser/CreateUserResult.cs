@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.Application.Users.CreateUser;
+﻿namespace DeveloperEvaluation.Application.Users.CreateUser;
 
 /// <summary>
 /// Represents the response returned after successfully creating a new user.

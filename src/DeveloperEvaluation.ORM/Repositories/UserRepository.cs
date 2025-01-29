@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Repositories;
+﻿using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
-namespace Developerevaluation.ORM.Repositories;
+namespace DeveloperEvaluation.ORM.Repositories;
 
 /// <summary>
 /// Implementation of IUserRepository using Entity Framework Core

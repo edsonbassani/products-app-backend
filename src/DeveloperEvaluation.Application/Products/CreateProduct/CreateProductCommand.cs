@@ -1,9 +1,9 @@
-﻿using Developerevaluation.Common.Validation;
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Repositories;
+﻿using DeveloperEvaluation.Common.Validation;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Repositories;
 using MediatR;
 
-namespace Developerevaluation.Application.Products.CreateProduct;
+namespace DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// Command for creating a new product.

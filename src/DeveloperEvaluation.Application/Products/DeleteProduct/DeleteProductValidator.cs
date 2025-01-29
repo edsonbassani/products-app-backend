@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.Application.Products.DeleteProduct;
+namespace DeveloperEvaluation.Application.Products.DeleteProduct;
 
 /// <summary>
 /// Validator for DeleteProductCommand

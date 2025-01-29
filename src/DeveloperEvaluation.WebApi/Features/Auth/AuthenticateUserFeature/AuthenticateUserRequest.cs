@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.WebApi.Features.Auth.AuthenticateUserFeature;
+﻿namespace DeveloperEvaluation.WebApi.Features.Auth.AuthenticateUserFeature;
 
 /// <summary>
 /// Represents the authentication request model for user login.

@@ -15,10 +15,10 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<ProjectReference Include="..\Developerevaluation.Domain\Developerevaluation.Domain.csproj" />
-		<ProjectReference Include="..\Developerevaluation.Application\Developerevaluation.Application.csproj" />
-		<ProjectReference Include="..\Developerevaluation.ORM\Developerevaluation.ORM.csproj" />
-		<ProjectReference Include="..\Developerevaluation.Common\Developerevaluation.Common.csproj" />
+		<ProjectReference Include="..\DeveloperEvaluation.Domain\DeveloperEvaluation.Domain.csproj" />
+		<ProjectReference Include="..\DeveloperEvaluation.Application\DeveloperEvaluation.Application.csproj" />
+		<ProjectReference Include="..\DeveloperEvaluation.ORM\DeveloperEvaluation.ORM.csproj" />
+		<ProjectReference Include="..\DeveloperEvaluation.Common\DeveloperEvaluation.Common.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Developerevaluation.Common.Security;
-using Developerevaluation.Domain.Repositories;
-using Developerevaluation.Domain.Specifications;
+using DeveloperEvaluation.Common.Security;
+using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.Domain.Specifications;
 using MediatR;
 
-namespace Developerevaluation.Application.Auth.AuthenticateUser
+namespace DeveloperEvaluation.Application.Auth.AuthenticateUser
 {
     public class AuthenticateUserHandler : IRequestHandler<AuthenticateUserCommand, AuthenticateUserResult>
     {

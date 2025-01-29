@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.Application;
+﻿namespace DeveloperEvaluation.Application;
 
 /// <summary>
 /// Represents the application layer of the system.

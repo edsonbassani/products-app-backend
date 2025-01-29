@@ -1,9 +1,9 @@
-﻿using Developerevaluation.Common.Validation;
-using Developerevaluation.WebApi.Common;
+﻿using DeveloperEvaluation.Common.Validation;
+using DeveloperEvaluation.WebApi.Common;
 using FluentValidation;
 using System.Text.Json;
 
-namespace Developerevaluation.WebApi.Middleware
+namespace DeveloperEvaluation.WebApi.Middleware
 {
     public class ValidationExceptionMiddleware
     {

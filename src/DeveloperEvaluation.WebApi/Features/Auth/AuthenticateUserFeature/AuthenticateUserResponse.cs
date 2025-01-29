@@ -1,6 +1,6 @@
 using System;
 
-namespace Developerevaluation.WebApi.Features.Auth.AuthenticateUserFeature;
+namespace DeveloperEvaluation.WebApi.Features.Auth.AuthenticateUserFeature;
 
 /// <summary>
 /// Represents the response returned after user authentication

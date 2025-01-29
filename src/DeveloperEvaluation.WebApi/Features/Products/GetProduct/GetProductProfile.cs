@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace Developerevaluation.WebApi.Features.Products.GetProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.GetProduct;
 
 /// <summary>
 /// Profile for mapping GetProduct feature requests to commands

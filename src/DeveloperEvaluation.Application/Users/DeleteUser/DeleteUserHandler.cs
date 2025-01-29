@@ -1,11 +1,11 @@
 using MediatR;
 using FluentValidation;
-using Developerevaluation.Domain.Repositories;
-using Developerevaluation.Application.Products.DeleteProduct;
+using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.Application.Products.DeleteProduct;
 using Microsoft.Extensions.Logging;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
-namespace Developerevaluation.Application.Users.DeleteUser;
+namespace DeveloperEvaluation.Application.Users.DeleteUser;
 
 /// <summary>
 /// Handler for processing DeleteUserCommand requests

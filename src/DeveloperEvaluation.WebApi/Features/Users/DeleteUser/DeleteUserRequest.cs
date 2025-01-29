@@ -1,4 +1,4 @@
-namespace Developerevaluation.WebApi.Features.Users.DeleteUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.DeleteUser;
 
 /// <summary>
 /// Request model for deleting a user

@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.Domain.Specifications;
+﻿namespace DeveloperEvaluation.Domain.Specifications;
 
 public interface ISpecification<T>
 {

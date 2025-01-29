@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Application.Products.CreateProduct;
+namespace DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// Profile for mapping between Product entity and CreateProductResponse

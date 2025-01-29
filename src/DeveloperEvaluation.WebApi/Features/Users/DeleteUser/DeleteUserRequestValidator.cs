@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Users.DeleteUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.DeleteUser;
 
 /// <summary>
 /// Validator for DeleteUserRequest

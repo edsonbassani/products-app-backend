@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Auth.AuthenticateUserFeature;
+namespace DeveloperEvaluation.WebApi.Features.Auth.AuthenticateUserFeature;
 
 /// <summary>
 /// Validator for AuthenticateUserRequest

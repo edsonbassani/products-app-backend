@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Application.Users.CreateUser;
-using Developerevaluation.WebApi.Features.Users.CreateUser;
+﻿using DeveloperEvaluation.Application.Users.CreateUser;
+using DeveloperEvaluation.WebApi.Features.Users.CreateUser;
 using AutoMapper;
 
-namespace Developerevaluation.WebApi.Mappings;
+namespace DeveloperEvaluation.WebApi.Mappings;
 
 public class CreateUserRequestProfile : Profile
 {

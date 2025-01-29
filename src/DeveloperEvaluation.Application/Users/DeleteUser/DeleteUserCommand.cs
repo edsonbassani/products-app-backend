@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Developerevaluation.Application.Users.DeleteUser;
+namespace DeveloperEvaluation.Application.Users.DeleteUser;
 
 /// <summary>
 /// Command for deleting a user

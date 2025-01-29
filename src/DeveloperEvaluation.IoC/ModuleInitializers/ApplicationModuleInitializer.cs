@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Common.Security;
+﻿using DeveloperEvaluation.Common.Security;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Developerevaluation.IoC.ModuleInitializers;
+namespace DeveloperEvaluation.IoC.ModuleInitializers;
 
 public class ApplicationModuleInitializer : IModuleInitializer
 {

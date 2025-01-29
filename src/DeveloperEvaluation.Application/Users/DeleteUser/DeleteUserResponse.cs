@@ -1,4 +1,4 @@
-namespace Developerevaluation.Application.Users.DeleteUser;
+namespace DeveloperEvaluation.Application.Users.DeleteUser;
 
 /// <summary>
 /// Response model for DeleteUser operation

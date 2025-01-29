@@ -1,13 +1,13 @@
-using Developerevaluation.Application.Products.CreateProduct;
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Repositories;
-using Developerevaluation.Unit.Domain;
+using DeveloperEvaluation.Application.Products.CreateProduct;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.Unit.Domain;
 using AutoMapper;
 using FluentAssertions;
 using NSubstitute;
 using Xunit;
 
-namespace Developerevaluation.Unit.Application;
+namespace DeveloperEvaluation.Unit.Application;
 
 /// <summary>
 /// Contains unit tests for the <see cref="CreateProductHandler"/> class.

@@ -1,6 +1,6 @@
 using System;
 
-namespace Developerevaluation.Common.Security;
+namespace DeveloperEvaluation.Common.Security;
 
 /// <summary>
 /// Implements password hashing functionality using BCrypt algorithm.

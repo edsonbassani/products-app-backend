@@ -1,9 +1,9 @@
-﻿using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Validation;
+﻿using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Products.CreateProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.CreateProduct;
 
 /// <summary>
 /// Validator for CreateProductRequest that defines validation rules for product creation.

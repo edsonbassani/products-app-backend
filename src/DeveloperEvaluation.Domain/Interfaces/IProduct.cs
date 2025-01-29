@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Developerevaluation.Domain.Interfaces
+namespace DeveloperEvaluation.Domain.Interfaces
 {
     /// <summary>
     /// Sets the contract to represent a product within the application

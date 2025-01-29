@@ -1,19 +1,19 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Developerevaluation.WebApi.Common;
-using Developerevaluation.WebApi.Features.Products.CreateProduct;
-using Developerevaluation.WebApi.Features.Products.GetProduct;
-using Developerevaluation.WebApi.Features.Products.DeleteProduct;
-using Developerevaluation.Application.Products.CreateProduct;
-using Developerevaluation.Application.Products.GetProduct;
-using Developerevaluation.Application.Products.DeleteProduct;
+using DeveloperEvaluation.WebApi.Common;
+using DeveloperEvaluation.WebApi.Features.Products.CreateProduct;
+using DeveloperEvaluation.WebApi.Features.Products.GetProduct;
+using DeveloperEvaluation.WebApi.Features.Products.DeleteProduct;
+using DeveloperEvaluation.Application.Products.CreateProduct;
+using DeveloperEvaluation.Application.Products.GetProduct;
+using DeveloperEvaluation.Application.Products.DeleteProduct;
 using Rebus.Bus;
-using Developerevaluation.WebApi.Features.Products.ListProduct;
-using Developerevaluation.Application.Products.ListProduct;
+using DeveloperEvaluation.WebApi.Features.Products.ListProduct;
+using DeveloperEvaluation.Application.Products.ListProduct;
 using System.ComponentModel.DataAnnotations;
 
-namespace Developerevaluation.WebApi.Features.Products;
+namespace DeveloperEvaluation.WebApi.Features.Products;
 
 /// <summary>
 /// Controller for managing product operations

@@ -1,6 +1,6 @@
-﻿using Developerevaluation.Common.Validation;
+﻿using DeveloperEvaluation.Common.Validation;
 
-namespace Developerevaluation.Domain.Common;
+namespace DeveloperEvaluation.Domain.Common;
 
 public class BaseEntity : IComparable<BaseEntity>
 {

@@ -1,11 +1,11 @@
-using Developerevaluation.Common.Security;
-using Developerevaluation.Common.Validation;
-using Developerevaluation.Domain.Common;
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Interfaces;
-using Developerevaluation.Domain.Validation;
+using DeveloperEvaluation.Common.Security;
+using DeveloperEvaluation.Common.Validation;
+using DeveloperEvaluation.Domain.Common;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Interfaces;
+using DeveloperEvaluation.Domain.Validation;
 
-namespace Developerevaluation.Domain.Entities;
+namespace DeveloperEvaluation.Domain.Entities;
 
 
 /// <summary>

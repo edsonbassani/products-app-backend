@@ -1,4 +1,4 @@
-namespace Developerevaluation.Application.Auth.AuthenticateUser;
+namespace DeveloperEvaluation.Application.Auth.AuthenticateUser;
 
 /// <summary>
 /// Represents the response after authenticating a user

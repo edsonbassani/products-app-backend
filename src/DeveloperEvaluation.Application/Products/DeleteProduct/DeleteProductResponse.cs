@@ -1,4 +1,4 @@
-namespace Developerevaluation.Application.Products.DeleteProduct;
+namespace DeveloperEvaluation.Application.Products.DeleteProduct;
 
 /// <summary>
 /// Response model for DeleteProduct operation

@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Products.GetProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.GetProduct;
 
 /// <summary>
 /// Validator for GetProductRequest

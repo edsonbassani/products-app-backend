@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace Developerevaluation.IoC;
+namespace DeveloperEvaluation.IoC;
 
 public interface IModuleInitializer
 {

@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.WebApi.Features.Products.CreateProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.CreateProduct;
 
 /// <summary>
 /// API response model for CreateProduct operation

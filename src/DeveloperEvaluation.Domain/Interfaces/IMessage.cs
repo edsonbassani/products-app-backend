@@ -1,11 +1,11 @@
-﻿using Developerevaluation.Domain.Enums;
+﻿using DeveloperEvaluation.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Developerevaluation.Domain.Interfaces
+namespace DeveloperEvaluation.Domain.Interfaces
 {
     /// <summary>
     /// Sets the contract to represent a message within the application

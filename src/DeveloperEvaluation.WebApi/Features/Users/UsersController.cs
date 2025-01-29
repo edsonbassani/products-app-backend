@@ -1,16 +1,16 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Developerevaluation.WebApi.Common;
-using Developerevaluation.WebApi.Features.Users.CreateUser;
-using Developerevaluation.WebApi.Features.Users.GetUser;
-using Developerevaluation.WebApi.Features.Users.DeleteUser;
-using Developerevaluation.Application.Users.CreateUser;
-using Developerevaluation.Application.Users.GetUser;
-using Developerevaluation.Application.Users.DeleteUser;
+using DeveloperEvaluation.WebApi.Common;
+using DeveloperEvaluation.WebApi.Features.Users.CreateUser;
+using DeveloperEvaluation.WebApi.Features.Users.GetUser;
+using DeveloperEvaluation.WebApi.Features.Users.DeleteUser;
+using DeveloperEvaluation.Application.Users.CreateUser;
+using DeveloperEvaluation.Application.Users.GetUser;
+using DeveloperEvaluation.Application.Users.DeleteUser;
 using Rebus.Bus;
 
-namespace Developerevaluation.WebApi.Features.Users;
+namespace DeveloperEvaluation.WebApi.Features.Users;
 
 /// <summary>
 /// Controller for managing user operations

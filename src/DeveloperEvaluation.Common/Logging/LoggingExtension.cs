@@ -11,7 +11,7 @@ using Serilog.Sinks.SystemConsole.Themes;
 using Serilog.Templates;
 using System.Diagnostics;
 
-namespace Developerevaluation.Common.Logging;
+namespace DeveloperEvaluation.Common.Logging;
 
 
 

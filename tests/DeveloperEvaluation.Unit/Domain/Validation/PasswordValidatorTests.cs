@@ -1,9 +1,9 @@
-using Developerevaluation.Domain.Validation;
-using Developerevaluation.Unit.Domain.Entities.TestData;
+using DeveloperEvaluation.Domain.Validation;
+using DeveloperEvaluation.Unit.Domain.Entities.TestData;
 using FluentValidation.TestHelper;
 using Xunit;
 
-namespace Developerevaluation.Unit.Domain.Validation;
+namespace DeveloperEvaluation.Unit.Domain.Validation;
 
 /// <summary>
 /// Contains unit tests for the PasswordValidator class.

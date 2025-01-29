@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Developerevaluation.Application.Users.GetUser;
+namespace DeveloperEvaluation.Application.Users.GetUser;
 
 /// <summary>
 /// Command for retrieving a user by their ID

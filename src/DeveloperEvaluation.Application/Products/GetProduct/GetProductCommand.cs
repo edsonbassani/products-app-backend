@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Developerevaluation.Application.Products.GetProduct;
+namespace DeveloperEvaluation.Application.Products.GetProduct;
 
 /// <summary>
 /// Command for retrieving a product by their ID

@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Validation;
+﻿using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Users.CreateUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.CreateUser;
 
 /// <summary>
 /// Validator for CreateUserRequest that defines validation rules for user creation.

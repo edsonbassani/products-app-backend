@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Developerevaluation.Common.Validation;
+namespace DeveloperEvaluation.Common.Validation;
 
 public static class Validator
 {

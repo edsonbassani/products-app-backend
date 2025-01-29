@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace Developerevaluation.Common.Security;
+namespace DeveloperEvaluation.Common.Security;
 
 /// <summary>
 /// Implementation of JWT (JSON Web Token) generator.

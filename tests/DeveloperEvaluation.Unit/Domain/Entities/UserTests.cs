@@ -1,9 +1,9 @@
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Unit.Domain.Entities.TestData;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Unit.Domain.Entities.TestData;
 using Xunit;
 
-namespace Developerevaluation.Unit.Domain.Entities;
+namespace DeveloperEvaluation.Unit.Domain.Entities;
 
 /// <summary>
 /// Contains unit tests for the User entity class.

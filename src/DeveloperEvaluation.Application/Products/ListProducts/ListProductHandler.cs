@@ -1,11 +1,11 @@
 using AutoMapper;
 using MediatR;
 using FluentValidation;
-using Developerevaluation.Domain.Repositories;
+using DeveloperEvaluation.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Application.Products.ListProduct;
+namespace DeveloperEvaluation.Application.Products.ListProduct;
 
 /// <summary>
 /// Handler for processing GetProductCommand requests

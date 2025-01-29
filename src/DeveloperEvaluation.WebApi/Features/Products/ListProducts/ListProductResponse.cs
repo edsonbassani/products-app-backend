@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.WebApi.Features.Products.ListProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.ListProduct;
 
 /// <summary>
 /// API response model for ListProduct operation

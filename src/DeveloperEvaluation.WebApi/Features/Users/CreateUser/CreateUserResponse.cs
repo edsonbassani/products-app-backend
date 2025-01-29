@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.WebApi.Features.Users.CreateUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.CreateUser;
 
 /// <summary>
 /// API response model for CreateUser operation

@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.Application.Products.GetProduct;
+namespace DeveloperEvaluation.Application.Products.GetProduct;
 
 /// <summary>
 /// Validator for GetProductCommand

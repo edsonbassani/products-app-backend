@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Common.Validation;
-using Developerevaluation.Domain.Enums;
+﻿using DeveloperEvaluation.Common.Validation;
+using DeveloperEvaluation.Domain.Enums;
 using MediatR;
 
-namespace Developerevaluation.Application.Users.CreateUser;
+namespace DeveloperEvaluation.Application.Users.CreateUser;
 
 /// <summary>
 /// Command for creating a new user.

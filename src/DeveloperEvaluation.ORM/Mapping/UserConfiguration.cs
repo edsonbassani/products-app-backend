@@ -1,9 +1,9 @@
-﻿using Developerevaluation.Domain.Entities;
+﻿using DeveloperEvaluation.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Text.RegularExpressions;
 
-namespace Developerevaluation.ORM.Mapping;
+namespace DeveloperEvaluation.ORM.Mapping;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {

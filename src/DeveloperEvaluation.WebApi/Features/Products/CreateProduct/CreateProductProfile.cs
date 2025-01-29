@@ -1,7 +1,7 @@
 using AutoMapper;
-using Developerevaluation.Application.Products.CreateProduct;
+using DeveloperEvaluation.Application.Products.CreateProduct;
 
-namespace Developerevaluation.WebApi.Features.Products.CreateProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.CreateProduct;
 
 /// <summary>
 /// Profile for mapping between Application and API CreateProduct responses

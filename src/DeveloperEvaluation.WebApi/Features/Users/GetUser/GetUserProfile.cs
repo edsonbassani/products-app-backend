@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace Developerevaluation.WebApi.Features.Users.GetUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.GetUser;
 
 /// <summary>
 /// Profile for mapping GetUser feature requests to commands

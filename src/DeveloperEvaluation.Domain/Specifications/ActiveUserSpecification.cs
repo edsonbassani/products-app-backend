@@ -1,7 +1,7 @@
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.Domain.Specifications;
+namespace DeveloperEvaluation.Domain.Specifications;
 
 public class ActiveUserSpecification : ISpecification<User>
 {

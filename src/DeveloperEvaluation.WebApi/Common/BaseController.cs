@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
-namespace Developerevaluation.WebApi.Common;
+namespace DeveloperEvaluation.WebApi.Common;
 
 [Route("api/[controller]")]
 [ApiController]

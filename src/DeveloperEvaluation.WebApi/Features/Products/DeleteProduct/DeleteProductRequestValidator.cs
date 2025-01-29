@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Products.DeleteProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.DeleteProduct;
 
 /// <summary>
 /// Validator for DeleteProductRequest

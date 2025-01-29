@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Application.Users.CreateUser;
+namespace DeveloperEvaluation.Application.Users.CreateUser;
 
 /// <summary>
 /// Profile for mapping between User entity and CreateUserResponse

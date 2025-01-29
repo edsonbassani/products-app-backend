@@ -1,4 +1,4 @@
-namespace Developerevaluation.WebApi.Features.Products.ListProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.ListProduct;
 
 /// <summary>
 /// Request model for getting a product by ID

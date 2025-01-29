@@ -6,7 +6,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Logging;
 using System.Net.Mime;
 
-namespace Developerevaluation.Common.HealthChecks;
+namespace DeveloperEvaluation.Common.HealthChecks;
 
 /// <summary>
 /// Provides extension methods for configuring health checks in an ASP.NET Core application.

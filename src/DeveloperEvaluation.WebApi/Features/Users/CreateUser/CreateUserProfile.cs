@@ -1,7 +1,7 @@
 using AutoMapper;
-using Developerevaluation.Application.Users.CreateUser;
+using DeveloperEvaluation.Application.Users.CreateUser;
 
-namespace Developerevaluation.WebApi.Features.Users.CreateUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.CreateUser;
 
 /// <summary>
 /// Profile for mapping between Application and API CreateUser responses

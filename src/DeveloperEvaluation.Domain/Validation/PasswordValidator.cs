@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Developerevaluation.Domain.Validation;
+namespace DeveloperEvaluation.Domain.Validation;
 
 public class PasswordValidator : AbstractValidator<string>
 {

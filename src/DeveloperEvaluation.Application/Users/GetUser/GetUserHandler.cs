@@ -1,9 +1,9 @@
 using AutoMapper;
 using MediatR;
 using FluentValidation;
-using Developerevaluation.Domain.Repositories;
+using DeveloperEvaluation.Domain.Repositories;
 
-namespace Developerevaluation.Application.Users.GetUser;
+namespace DeveloperEvaluation.Application.Users.GetUser;
 
 /// <summary>
 /// Handler for processing GetUserCommand requests

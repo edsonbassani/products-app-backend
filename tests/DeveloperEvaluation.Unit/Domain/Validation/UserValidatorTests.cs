@@ -1,10 +1,10 @@
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Validation;
-using Developerevaluation.Unit.Domain.Entities.TestData;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Validation;
+using DeveloperEvaluation.Unit.Domain.Entities.TestData;
 using FluentValidation.TestHelper;
 using Xunit;
 
-namespace Developerevaluation.Unit.Domain.Validation;
+namespace DeveloperEvaluation.Unit.Domain.Validation;
 
 /// <summary>
 /// Contains unit tests for the UserValidator class.

@@ -1,8 +1,8 @@
-using Developerevaluation.Domain.Validation;
+using DeveloperEvaluation.Domain.Validation;
 using FluentAssertions;
 using Xunit;
 
-namespace Developerevaluation.Unit.Domain.Validation
+namespace DeveloperEvaluation.Unit.Domain.Validation
 {
     /// <summary>
     /// Contains unit tests for the <see cref="PhoneValidator"/> class.

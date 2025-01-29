@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.Application.Products.GetProduct;
+namespace DeveloperEvaluation.Application.Products.GetProduct;
 
 /// <summary>
 /// Response model for GetProduct operation

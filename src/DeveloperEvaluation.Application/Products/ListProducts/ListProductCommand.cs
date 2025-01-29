@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Developerevaluation.Application.Products.ListProduct;
+namespace DeveloperEvaluation.Application.Products.ListProduct;
 
 /// <summary>
 /// Command for list products

@@ -1,10 +1,10 @@
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Specifications;
-using Developerevaluation.Unit.Domain.Specifications.TestData;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Specifications;
+using DeveloperEvaluation.Unit.Domain.Specifications.TestData;
 using FluentAssertions;
 using Xunit;
 
-namespace Developerevaluation.Unit.Domain.Specifications
+namespace DeveloperEvaluation.Unit.Domain.Specifications
 {
     public class ActiveUserSpecificationTests
     {

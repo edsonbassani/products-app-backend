@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.Application.Users.GetUser;
+namespace DeveloperEvaluation.Application.Users.GetUser;
 
 /// <summary>
 /// Validator for GetUserCommand

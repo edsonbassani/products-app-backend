@@ -1,6 +1,6 @@
-﻿using Developerevaluation.Common.Validation;
+﻿using DeveloperEvaluation.Common.Validation;
 
-namespace Developerevaluation.WebApi.Common;
+namespace DeveloperEvaluation.WebApi.Common;
 
 public class ApiResponse
 {

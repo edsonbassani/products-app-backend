@@ -1,6 +1,6 @@
-using Developerevaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Enums;
 
-namespace Developerevaluation.Application.Users.GetUser;
+namespace DeveloperEvaluation.Application.Users.GetUser;
 
 /// <summary>
 /// Response model for GetUser operation

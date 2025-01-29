@@ -1,7 +1,7 @@
 using AutoMapper;
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Application.Users.GetUser;
+namespace DeveloperEvaluation.Application.Users.GetUser;
 
 /// <summary>
 /// Profile for mapping between User entity and GetUserResponse

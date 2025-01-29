@@ -1,4 +1,4 @@
-﻿namespace Developerevaluation.WebApi.Common;
+﻿namespace DeveloperEvaluation.WebApi.Common;
 
 public class ApiResponseWithData<T> : ApiResponse
 {

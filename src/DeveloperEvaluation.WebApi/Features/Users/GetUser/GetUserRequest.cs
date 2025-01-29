@@ -1,4 +1,4 @@
-namespace Developerevaluation.WebApi.Features.Users.GetUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.GetUser;
 
 /// <summary>
 /// Request model for getting a user by ID

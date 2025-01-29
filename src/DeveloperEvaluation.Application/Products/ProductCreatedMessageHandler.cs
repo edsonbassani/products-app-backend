@@ -1,7 +1,7 @@
 ﻿using Rebus.Handlers;
-using Developerevaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Entities;
 
-namespace Developerevaluation.Application.Users.Handlers
+namespace DeveloperEvaluation.Application.Users.Handlers
 {
     public class ProductCreatedMessageHandler : IHandleMessages<Product>
     {

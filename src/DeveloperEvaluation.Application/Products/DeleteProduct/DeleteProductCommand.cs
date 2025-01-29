@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Developerevaluation.Application.Products.DeleteProduct;
+namespace DeveloperEvaluation.Application.Products.DeleteProduct;
 
 /// <summary>
 /// Command for deleting a product

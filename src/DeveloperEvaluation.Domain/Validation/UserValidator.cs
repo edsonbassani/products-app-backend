@@ -1,8 +1,8 @@
-﻿using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Enums;
+﻿using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Enums;
 using FluentValidation;
 
-namespace Developerevaluation.Domain.Validation;
+namespace DeveloperEvaluation.Domain.Validation;
 
 public class UserValidator : AbstractValidator<User>
 {

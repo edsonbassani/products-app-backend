@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using MediatR;
 using FluentValidation;
-using Developerevaluation.Domain.Repositories;
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Common.Security;
+using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Common.Security;
 
-namespace Developerevaluation.Application.Users.CreateUser;
+namespace DeveloperEvaluation.Application.Users.CreateUser;
 
 /// <summary>
 /// Handler for processing CreateUserCommand requests

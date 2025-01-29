@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace Developerevaluation.WebApi.Features.Users.GetUser;
+namespace DeveloperEvaluation.WebApi.Features.Users.GetUser;
 
 /// <summary>
 /// Validator for GetUserRequest

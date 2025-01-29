@@ -1,8 +1,8 @@
 using AutoMapper;
-using Developerevaluation.Domain.Entities;
-using Developerevaluation.Application.Auth.AuthenticateUser;
+using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Application.Auth.AuthenticateUser;
 
-namespace Developerevaluation.WebApi.Features.Auth.AuthenticateUserFeature;
+namespace DeveloperEvaluation.WebApi.Features.Auth.AuthenticateUserFeature;
 
 /// <summary>
 /// AutoMapper profile for authentication-related mappings

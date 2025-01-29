@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace Developerevaluation.Application.Auth.AuthenticateUser;
+namespace DeveloperEvaluation.Application.Auth.AuthenticateUser;
 
 /// <summary>
 /// Command for authenticating a user in the system.

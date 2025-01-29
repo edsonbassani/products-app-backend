@@ -1,10 +1,10 @@
-﻿using Developerevaluation.Domain.Entities;
-using Developerevaluation.Domain.Enums;
-using Developerevaluation.Domain.Repositories;
-using Developerevaluation.Domain.Validation;
+﻿using DeveloperEvaluation.Domain.Entities;
+using DeveloperEvaluation.Domain.Enums;
+using DeveloperEvaluation.Domain.Repositories;
+using DeveloperEvaluation.Domain.Validation;
 using FluentValidation;
 
-namespace Developerevaluation.Application.Products.CreateProduct;
+namespace DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// Validator for CreateProductCommand that defines validation rules for product creation command.

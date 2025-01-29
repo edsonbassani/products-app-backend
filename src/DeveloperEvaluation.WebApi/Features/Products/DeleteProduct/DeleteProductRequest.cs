@@ -1,4 +1,4 @@
-namespace Developerevaluation.WebApi.Features.Products.DeleteProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.DeleteProduct;
 
 /// <summary>
 /// Request model for deleting a product

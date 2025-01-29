@@ -1,4 +1,4 @@
-namespace Developerevaluation.Common.Security
+namespace DeveloperEvaluation.Common.Security
 {
     public interface IJwtTokenGenerator
     {

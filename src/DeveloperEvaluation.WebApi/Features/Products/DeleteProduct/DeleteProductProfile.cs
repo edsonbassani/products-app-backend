@@ -1,6 +1,6 @@
 using AutoMapper;
 
-namespace Developerevaluation.WebApi.Features.Products.DeleteProduct;
+namespace DeveloperEvaluation.WebApi.Features.Products.DeleteProduct;
 
 /// <summary>
 /// Profile for mapping DeleteProduct feature requests to commands
