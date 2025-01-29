@@ -11,15 +11,45 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout full repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - name: Checkout full repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
 
-    - name: Debug File Structure
-      run: ls -R
+      - name: Show Current Directory
+        run: pwd
+
+      - name: Show File Structure
+        run: ls -R
+
+      - name: Set Solution Path
+        run: echo 'SOLUTION_PATH=${{ github.workspace }}/DeveloperEvaluation.sln' >> $GITHUB_ENV
+
+      - name: Display Solution Path
+        run: echo ${{ env.SOLUTION_PATH }}
+
+      - name: Restore dependencies
+        run: dotnet restore "${{ env.SOLUTION_PATH }}"
+
+      - name: Build
+        run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
+
+      - name: Test
+        run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
+
+      - name: Publish
+        run: dotnet publish src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
+
+      - name: Create ZIP file
+        run: zip -r ./output.zip ./publish
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: ./output.zip
