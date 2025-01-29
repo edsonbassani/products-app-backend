@@ -3,11 +3,8 @@
 This project is the backend of the **Products App**, developed using **.NET 8** with a **Clean Architecture** and **CQRS** approach. 
 It provides endpoints for authentication and product CRUD operations, with pagination, sorting, and filtering support.
 
-## 🔹 CI/CD Status
 ![Build Status](https://img.shields.io/github/actions/workflow/status/edsonbassani/products-app-backend/dotnet.yml?label=Build)
 ![Code Analysis](https://img.shields.io/github/actions/workflow/status/edsonbassani/products-app-backend/dotnet.yml?label=Code%20Analysis)
-
-## 🔹 Security & Code Analysis
 ![CodeQL Analysis](https://img.shields.io/github/actions/workflow/status/edsonbassani/products-app-backend/dotnet.yml?label=CodeQL)
 ![OWASP Check](https://img.shields.io/github/actions/workflow/status/edsonbassani/products-app-backend/dotnet.yml?label=OWASP)
 
