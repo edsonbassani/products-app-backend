@@ -1,0 +1,46 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Find solution file
+      id: find_sln
+      run: echo "SOLUTION_PATH=$(find . -name '*.sln' | head -n 1)" >> $GITHUB_ENV
+
+    - name: Display solution path
+      run: echo "Solution Path" ${{ env.SOLUTION_PATH }}
+  
+
+    - name: Restore dependencies
+      run: dotnet restore ${{ env.SOLUTION_PATH }}
+
+    - name: Build
+      run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore
+
+    - name: Test
+      run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --verbosity normal
+
+    - name: Publish
+      run: dotnet publish /home/runner/work/products-app-backend/products-app-backend/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
+
+    - name: Create ZIP file
+      run: zip -r ./output.zip ./publish
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-output
+        path: ./output.zip
