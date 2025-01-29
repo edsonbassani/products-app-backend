@@ -14,7 +14,7 @@ jobs:
       - name: Checkout full repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensures we get the entire repo
+          fetch-depth: 0
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -42,10 +42,10 @@ jobs:
       - name: Run .NET Code Analysis
         run: dotnet build "${{ env.SOLUTION_PATH }}" /p:TreatWarningsAsErrors=true
 
-      - name: Build Solution
+      - name: Build
         run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
 
-      - name: Run Unit Tests
+      - name: Test
         run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
 
       - name: Initialize CodeQL
@@ -56,7 +56,7 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
 
-      - name: Publish Web API
+      - name: Publish
         run: dotnet publish "${{ github.workspace }}/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj" -c Release -o ./publish
 
       - name: Create ZIP file
