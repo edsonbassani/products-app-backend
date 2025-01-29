@@ -3,6 +3,10 @@
 This project is the backend of the **Products App**, developed using **.NET 8** with a **Clean Architecture** and **CQRS** approach. 
 It provides endpoints for authentication and product CRUD operations, with pagination, sorting, and filtering support.
 
+![Build Status](https://github.com/edsonbassani/products-app-backend/actions/workflows/dotnet.yml/badge.svg)
+
+![CodeQL](https://github.com/edsonbassani/products-app-backend/actions/workflows/codeql-analysis.yml/badge.svg)
+
 ## Tech Stack 
 - **.NET 8**
 - **Entity Framework Core**  
@@ -14,7 +18,12 @@ It provides endpoints for authentication and product CRUD operations, with pagin
 - **Rebus**  
 - **JWT Authentication**
 
-## Configuração e Execução
+## Pipeline Integrations
+- **Build**
+- **Code Analysis**
+- **CodeQL**
+
+## Configuration and Run
 
 ### 1. Repo configuration
 ```bash
