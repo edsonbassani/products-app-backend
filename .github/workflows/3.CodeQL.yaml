@@ -1,0 +1,42 @@
+name: CodeQL
+
+on:
+  workflow_run:
+    workflows: ["Code Analysis"]
+    types:
+      - completed
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  codeql-analysis:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout full repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Find solution file
+        id: find_sln
+        run: echo "SOLUTION_PATH=$(find $GITHUB_WORKSPACE -name '*.sln' | head -n 1)" >> $GITHUB_ENV
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: "csharp"
+
+      - name: Build Code for CodeQL
+        run: dotnet build "${{ env.SOLUTION_PATH }}" --configuration Release
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
