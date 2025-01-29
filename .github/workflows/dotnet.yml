@@ -12,20 +12,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
         
+    # Set the correct path based on repository structure
     - name: Set Solution Path
-      run: echo "ROOT_PATH=/home/runner/work/products-app-backend" >> $GITHUB_ENV
+      run: echo "ROOT_PATH=$(pwd)" >> $GITHUB_ENV
     
     - name: Find solution file
       id: find_sln
-      run: echo "SOLUTION_PATH=${ROOT_PATH}/DeveloperEvaluation.sln" >> $GITHUB_ENV
+      run: echo "SOLUTION_PATH=${GITHUB_WORKSPACE}/DeveloperEvaluation.sln" >> $GITHUB_ENV
 
     - name: Display Paths
-      run: echo "Root Path" ${{ env.SOLUTION_PATH }} - "Solution Path" ${{ env.SOLUTION_PATH }}
+      run: echo "Root Path: ${{ env.ROOT_PATH }} - Solution Path: ${{ env.SOLUTION_PATH }}"
 
     - name: Restore dependencies
       run: dotnet restore ${{ env.SOLUTION_PATH }}
