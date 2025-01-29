@@ -34,7 +34,7 @@ jobs:
       run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --verbosity normal
 
     - name: Publish
-      run: dotnet publish /home/runner/work/products-app-backend/products-app-backend/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
+      run: dotnet publish /home/runner/work/products-app-backend/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj -c Release -o ./publish
 
     - name: Create ZIP file
       run: zip -r ./output.zip ./publish
