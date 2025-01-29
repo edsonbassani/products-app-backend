@@ -26,11 +26,30 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ${{ env.SOLUTION_PATH }}
 
+    - name: Run OWASP Dependency Check
+      uses: dependency-check/Dependency-Check_Action@main
+      with:
+        project: "DeveloperEvaluation"
+        path: "src"
+        format: "HTML"
+        out: "dependency-check-report"
+
+    - name: Run .NET Code Analysis
+      run: dotnet build "${{ env.SOLUTION_PATH }}" /p:TreatWarningsAsErrors=true
+
     - name: Build
-      run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore
+      run: dotnet build "${{ env.SOLUTION_PATH }}" --no-restore
 
     - name: Test
-      run: dotnet test ${{ env.SOLUTION_PATH }} --no-build --verbosity normal
+      run: dotnet test "${{ env.SOLUTION_PATH }}" --no-build --verbosity normal
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: "csharp"
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
 
     - name: Publish
       run: dotnet publish "${{ github.workspace }}/src/DeveloperEvaluation.WebApi/DeveloperEvaluation.WebApi.csproj" -c Release -o ./publish
@@ -43,3 +62,4 @@ jobs:
       with:
         name: build-output
         path: ./output.zip
+        
