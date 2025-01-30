@@ -119,5 +119,8 @@ the target Framework version.
 
 
 ## Screenshots 
+![image](https://github.com/user-attachments/assets/92c659ff-cb88-4010-bf17-1643b6dad8e0)
+![image](https://github.com/user-attachments/assets/d07d5a64-e4ff-4dfc-9b47-e76813e3467b)
+![image](https://github.com/user-attachments/assets/18d2648b-4e67-4ae9-b06f-13cc782f260b)
 
-![image](https://github.com/user-attachments/assets/8588f347-2af5-4e91-9055-33d93dcdb629)
+
